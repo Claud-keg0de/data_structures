@@ -105,18 +105,14 @@ int main() {
     int arr[] = {30, 20, 40, 10, 25, 35, 45, 5, 15};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    // i) Create the BST
     createBST(&root, arr, size);
 
-    // ii) Delete a node from the BST
     int dataToDelete = 25;
     root = deleteNode(root, dataToDelete);
 
-    // iii) Print the height of the BST
     int height = getHeight(root);
     printf("Height of the BST: %d\n", height);
 
-    // iv) Print the level and height of any node in the BST
     int nodeData = 40;
     int level = getLevel(root, nodeData, 1);
     if (level != -1) {
